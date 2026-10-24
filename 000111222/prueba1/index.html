@@ -1,6 +1,109 @@
-Pablo TARIFEÑO
-15.791.427-8
-PABLO.TARIFENO@GMAIL.COM
-Cuenta Vista
-50160332742
-Banco Falabella
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pago por Transferencia</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+padding:20px;
+}
+
+.card{
+max-width:450px;
+margin:auto;
+background:white;
+border-radius:20px;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+h1{
+text-align:center;
+color:#009688;
+}
+
+.dato{
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#009688;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.mensaje{
+margin-top:10px;
+text-align:center;
+color:green;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Pablo Tarifeño</h1>
+
+<div class="dato">
+<b>Banco:</b> Falabella
+</div>
+
+<div class="dato">
+<b>Cuenta:</b> 59168332742
+</div>
+
+<div class="dato">
+<b>Tipo:</b> Cuenta Vista
+</div>
+
+<div class="dato">
+<b>RUT:</b> 15.791.427-8
+</div>
+
+<div class="dato">
+<b>Email:</b> pablo.tarifeno@gmail.com
+</div>
+
+<button onclick="copiar()">
+📋 Copiar Datos Bancarios
+</button>
+
+<div id="msg" class="mensaje"></div>
+
+</div>
+
+<script>
+
+function copiar(){
+
+let texto=`Nombre: Pablo Tarifeño
+Banco: Falabella
+Tipo: Cuenta Vista
+Cuenta: 59168332742
+RUT: 15.791.427-8
+Correo: pablo.tarifeno@gmail.com`;
+
+navigator.clipboard.writeText(texto);
+
+document.getElementById("msg").innerHTML=
+"✅ Datos copiados";
+}
+
+</script>
+
+</body>
+</html>
